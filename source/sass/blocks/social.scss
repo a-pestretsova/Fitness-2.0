@@ -1,0 +1,27 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  width: 25px;
+  height: 25px;
+}
+
+.social__item:not(:last-child)  {
+  margin-right: 11px;
+}
+
+.social__link {
+  padding: 4px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+}
+
+.social__link--ok {
+  padding: 4px 7px;
+}
+
+.social__link svg {
+  vertical-align: middle;
+}
