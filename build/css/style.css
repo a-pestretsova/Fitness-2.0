@@ -325,7 +325,7 @@ template {
   font-family: "Alumni Sans";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/alumni-sans/alumni-sans-600.woff2") format("woff2");
+  src: url("../fonts/alumni-sans/AlumniSans-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
@@ -1150,6 +1150,10 @@ button,
   }
 }
 
+.main-header__contacts {
+  z-index: 2;
+}
+
 .main-header__contacts-phone {
   font-weight: 600;
   font-size: 26px;
@@ -1172,15 +1176,33 @@ button,
 }
 
 .hero-wrapper {
+  position: relative;
   min-height: 658px;
   background: conic-gradient(from 90deg at 16.03% 39.06%, #B80027, #003D85 62deg, #B80027 335deg);
+}
+@media (max-width: 1199px) {
+  .hero-wrapper {
+    min-height: 554px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-wrapper {
+    min-height: 491px;
+  }
+}
+
+.hero {
+  left: 50%;
 }
 
 .hero__text {
   position: relative;
   width: 377px;
-  margin-top: 112px;
-  margin-left: 110px;
+  margin-top: 105px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-558px);
+      -ms-transform: translateX(-558px);
+          transform: translateX(-558px);
   font-weight: 600;
   font-size: 36px;
   line-height: normal;
@@ -1188,40 +1210,145 @@ button,
   color: #ffffff;
   text-align: end;
 }
+@media (max-width: 1199px) {
+  .hero__text {
+    width: 324px;
+    margin-top: 72px;
+    -webkit-transform: translateX(-336px);
+        -ms-transform: translateX(-336px);
+            transform: translateX(-336px);
+  }
+}
+@media (max-width: 767px) {
+  .hero__text {
+    width: 291px;
+    margin-top: 65px;
+    -webkit-transform: translateX(-144px);
+        -ms-transform: translateX(-144px);
+            transform: translateX(-144px);
+  }
+}
 
 .hero__text span {
-  margin-right: 25px;
-  font-size: 32px;
-  letter-spacing: 0;
-  font-family: "Alumni Sans", "Arial", sans-serif;
+  margin-right: 55px;
+  font-size: 42px;
+  letter-spacing: 1.44px;
   text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .hero__text span {
+    margin-right: 7px;
+    font-size: 30px;
+    letter-spacing: 1.02px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__text span {
+    margin-right: 6px;
+    font-size: 26px;
+    letter-spacing: 0.84px;
+  }
 }
 
 .hero__text h1 {
-  margin-top: 35px;
+  margin-top: 10px;
   margin-bottom: 0;
-  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 96px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .hero__text h1 {
+    margin-top: 5px;
+    font-size: 72px;
+    text-transform: none;
+  }
+}
+@media (max-width: 767px) {
+  .hero__text h1 {
+    margin-top: 6px;
+  }
 }
 
 .hero__list {
   position: absolute;
-  top: 170px;
-  left: -25px;
+  top: 176px;
+  left: -39px;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   list-style: none;
 }
+@media (max-width: 1199px) {
+  .hero__list {
+    top: 126px;
+    left: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__list {
+    top: 117px;
+  }
+}
 
 .hero__btn {
-  margin-top: 74px;
-  margin-left: 267px;
+  margin-top: 44px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-418px);
+      -ms-transform: translateX(-418px);
+          transform: translateX(-418px);
   padding: 20px 54px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border: 4px solid #ffffff;
+}
+@media (max-width: 1199px) {
+  .hero__btn {
+    margin-top: 35px;
+    -webkit-transform: translateX(-198px);
+        -ms-transform: translateX(-198px);
+            transform: translateX(-198px);
+    padding: 20px 29px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__btn {
+    width: 290px;
+    margin-top: 23px;
+    -webkit-transform: translateX(-145px);
+        -ms-transform: translateX(-145px);
+            transform: translateX(-145px);
+    padding: 20px 82px;
+  }
+}
+
+.hero__photo {
+  position: absolute;
+  display: block;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-122px);
+      -ms-transform: translateX(-122px);
+          transform: translateX(-122px);
+}
+@media (max-width: 1199px) {
+  .hero__photo {
+    top: 82px;
+    left: 50%;
+    -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+            transform: translateX(16px);
+  }
+}
+@media (max-width: 767px) {
+  .hero__photo {
+    display: none;
+  }
+}
+
+.main-footer {
+  background-color: #102654;
 }
 
 /* @mixin hover-focus {
