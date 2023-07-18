@@ -1,12 +1,35 @@
 .main-footer {
+  background-color: $color-dark-blue;
+}
+
+.main-footer__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 43px;
+  padding-top: 38px;
   padding-bottom: 32px;
-  background-color: $color-dark-blue;
+
+  @include vp-767 {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 52px;
+    gap: 25px;
+    column-count: 2;
+  }
 }
 
 .main-footer__logo-link {
   margin-top: 10px;
+
+  @include vp-1199 {
+    margin-top: 10px;
+  }
+}
+
+.main-footer__social {
+  margin-top: 2px;
+
+  @include vp-1199 {
+    margin-top: 10px;
+  }
 }
