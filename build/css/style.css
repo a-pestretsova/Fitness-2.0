@@ -1256,7 +1256,7 @@ button,
   }
 }
 
-.hero__text h1 {
+.hero__text h2 {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: 96px;
@@ -1264,14 +1264,14 @@ button,
   text-transform: uppercase;
 }
 @media (max-width: 1199px) {
-  .hero__text h1 {
+  .hero__text h2 {
     margin-top: 5px;
     font-size: 72px;
     text-transform: none;
   }
 }
 @media (max-width: 767px) {
-  .hero__text h1 {
+  .hero__text h2 {
     margin-top: 6px;
   }
 }
@@ -1523,6 +1523,64 @@ button,
 
 .social__link svg {
   vertical-align: middle;
+}
+
+.intro__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 120px 103px 235px 163px;
+}
+
+.intro__text {
+  width: 360px;
+}
+
+.intro__text h2 {
+  margin-top: 56px;
+  margin-bottom: 0;
+  font-size: 48px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  letter-spacing: 1.44px;
+}
+
+.intro__text h4 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.intro__text p {
+  margin-top: 42px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+.intro__text span {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+.intro__video {
+  position: absolute;
+  top: 408px;
+  left: 540px;
 }
 
 /* @mixin hover-focus {
