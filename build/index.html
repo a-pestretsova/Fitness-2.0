@@ -8,7 +8,7 @@
     <title>Фитнес 2.0</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="preload" href="fonts/alumni-sans/alumni-sans-600.woff2" as="font">
+    <link rel="preload" href="fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font">
     <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff2" as="font">
   </head>
   <body>
@@ -22,7 +22,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/logotype.svg" width="69" height="24">
                   <source media="(max-width: 1199px)" srcset="img/logotype.svg" width="82" height="17">
-                  <img src="img/logotype.svg" width="120" height="23" alt="Фитнес центр «Supergym».">
+                  <img src="./img/logotype.svg" width="120" height="23" alt="Фитнес центр «Supergym».">
                 </picture>
               </a>
             </section>
@@ -47,8 +47,8 @@
           <button class="hero__btn btn" href="#">Купить абонемент</button>
           <div class="hero__photo">
             <picture>
-              <source media="(max-width: 1199px)" srcset="img/hero-tablet.png" width="324" height="390">
-              <img src="img/hero-desktop.png" width="500" height="556" alt="Изображение тренера фитнес центра «Supergym».">
+              <source media="(max-width: 1199px)" srcset="./img/hero-tablet.png" width="324" height="390">
+              <img src="./img/hero-desktop.png" width="500" height="556" alt="Изображение тренера фитнес центра «Supergym».">
             </picture>
           </div>
         </div>
@@ -68,11 +68,16 @@
               </span>
             </div>
 
-            <img src="img/intro-photo.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/intro-mobile.jpg" width="320" height="313">
+              <source media="(max-width: 1199px)" srcset="img/intro-tablet.jpg" width="678" height="345">
+              <img src="./img/intro-desktop.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
+            </picture>
 
-            <video class="intro__video" width="364" height="228" controls="controls" poster="img/video-poster.png">
-              <source src="video/intro-video.mp4" type="video/mp4">
+            <video class="intro__video" width="364" height="228" muted preload="auto" controls playsinline src="./video/intro-video.mp4" poster="./img/video-poster.png">
+              <!-- <source src="./video/intro-video.mp4" type="video/mp4"> -->
             </video>
+            <button class="intro__video-btn btn"></button>
           </div>
         </section>
       </main>
@@ -83,7 +88,7 @@
             <picture>
               <source media="(max-width: 767px)" srcset="img/logotype.svg" width="68" height="15">
               <source media="(max-width: 1199px)" srcset="img/logotype.svg" width="80" height="18">
-              <img src="img/logotype.svg" width="88" height="32" alt="Фитнес центр «Supergym».">
+              <img src="./img/logotype.svg" width="88" height="32" alt="Фитнес центр «Supergym».">
             </picture>
           </a>
 
