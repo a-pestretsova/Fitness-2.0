@@ -1,7 +1,6 @@
 .intro__wrapper {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 120px 103px 235px 163px;
 
@@ -136,23 +135,34 @@
     left: 0;
     width: 100%;
     height: 167px;
-    transform: none;
+    transform: translateX(0);
+    object-fit: cover;
   }
 }
 
 .intro__video-btn {
   position: absolute;
   top: 472px;
-  left: 50%;
-  transform: translateX(-12px);
+  left: 49.3%;
   width: 100px;
   height: 100px;
   background-image: url("../img/play-default.svg");
-  background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   content: "";
   background-color: transparent;
   border: none;
   border-radius: 50%;
+
+  @include vp-1199 {
+    top: 634px;
+    transform: translateX(-33px);
+    width: 73px;
+    height: 73px;
+  }
+
+  @include vp-767 {
+    top: 734px;
+    transform: translateX(-35px);
+  }
 }

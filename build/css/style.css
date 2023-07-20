@@ -1530,8 +1530,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1687,29 +1685,45 @@ button,
     left: 0;
     width: 100%;
     height: 167px;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
 .intro__video-btn {
   position: absolute;
   top: 472px;
-  left: 50%;
-  -webkit-transform: translateX(-12px);
-      -ms-transform: translateX(-12px);
-          transform: translateX(-12px);
+  left: 49.3%;
   width: 100px;
   height: 100px;
   background-image: url("../img/play-default.svg");
-  background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   content: "";
   background-color: transparent;
   border: none;
   border-radius: 50%;
+}
+@media (max-width: 1199px) {
+  .intro__video-btn {
+    top: 634px;
+    -webkit-transform: translateX(-33px);
+        -ms-transform: translateX(-33px);
+            transform: translateX(-33px);
+    width: 73px;
+    height: 73px;
+  }
+}
+@media (max-width: 767px) {
+  .intro__video-btn {
+    top: 734px;
+    -webkit-transform: translateX(-35px);
+        -ms-transform: translateX(-35px);
+            transform: translateX(-35px);
+  }
 }
 
 /* @mixin hover-focus {
