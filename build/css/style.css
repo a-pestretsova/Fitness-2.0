@@ -581,7 +581,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 27px 44px;
+  padding: 26px 43px;
   color: #102654;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 11px;
@@ -1694,22 +1694,31 @@ button,
 }
 
 .intro__video-btn {
+  position: relative;
   position: absolute;
   top: 472px;
-  left: 49.3%;
+  left: 49%;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.intro__video-btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100px;
   height: 100px;
   background-image: url("../img/play-default.svg");
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
 }
 @media (max-width: 1199px) {
-  .intro__video-btn {
+  .intro__video-btn::before {
     top: 634px;
+    left: 50%;
     -webkit-transform: translateX(-33px);
         -ms-transform: translateX(-33px);
             transform: translateX(-33px);
@@ -1718,12 +1727,197 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .intro__video-btn {
+  .intro__video-btn::before {
     top: 734px;
     -webkit-transform: translateX(-35px);
         -ms-transform: translateX(-35px);
             transform: translateX(-35px);
   }
+}
+
+.gym-pass__wrapper {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 240px;
+  background-color: #F8F9FC;
+}
+
+.gym-pass__wrapper::before {
+  position: absolute;
+  top: 482px;
+  right: -153px;
+  width: 441px;
+  height: 504px;
+  background-image: url("../img/pass-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.gym-pass__wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 45px;
+  font-size: 54px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  letter-spacing: 1.62px;
+  text-align: center;
+}
+
+.tabs {
+  max-width: 100%;
+}
+
+.tabs__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 345px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+}
+@media screen and (max-width: 767px) {
+  .tabs__controls {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.tabs__control {
+  padding: 0 0 14px 0;
+  color: rgba(16, 38, 84, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+@media screen and (max-width: 1023px) {
+  .tabs__control {
+    margin: 0 10px;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tabs__control {
+    margin: 10px 2% 0;
+    padding: 10px;
+    width: 45%;
+  }
+}
+.tabs__control:nth-child(2n) {
+  padding: 0 47px 14px;
+}
+.tabs__control.is-active {
+  color: #102654;
+  border-bottom: 2px solid #D10A42;
+  pointer-events: none;
+}
+
+.tabs__element {
+  width: 100%;
+}
+
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.product__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 67px 77px;
+  background-color: #F8F9FC;
+}
+
+.product__item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product__item p {
+  margin-top: 0;
+  margin-bottom: 102px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.product__item span {
+  margin-top: 0;
+  margin-bottom: 66px;
+  color: #103AAE;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product__item mark {
+  color: #102654;
+  background-color: transparent;
+}
+
+.product__btn {
+  border: 2px solid #1C3374;
 }
 
 /* @mixin hover-focus {

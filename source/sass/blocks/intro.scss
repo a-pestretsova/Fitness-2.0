@@ -141,28 +141,38 @@
 }
 
 .intro__video-btn {
+  position: relative;
   position: absolute;
   top: 472px;
-  left: 49.3%;
+  left: 49%;
   width: 100px;
   height: 100px;
-  background-image: url("../img/play-default.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  content: "";
   background-color: transparent;
   border: none;
   border-radius: 50%;
 
-  @include vp-1199 {
-    top: 634px;
-    transform: translateX(-33px);
-    width: 73px;
-    height: 73px;
-  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/play-default.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
 
-  @include vp-767 {
-    top: 734px;
-    transform: translateX(-35px);
+    @include vp-1199 {
+      top: 634px;
+      left: 50%;
+      transform: translateX(-33px);
+      width: 73px;
+      height: 73px;
+    }
+
+    @include vp-767 {
+      top: 734px;
+      transform: translateX(-35px);
+    }
   }
 }
