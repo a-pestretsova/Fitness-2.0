@@ -1,5 +1,6 @@
 .btn {
   display: inline-flex;
+  margin: 0 auto;
   padding: 26px 43px;
 
   color: $color-blue;
@@ -22,9 +23,5 @@
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
