@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
+import {newSwiper} from './modules/swiper/swiper-trainers';
 
 // ---------------------------------
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initTabs();
+  newSwiper();
 
   // Modules
   // ---------------------------------
