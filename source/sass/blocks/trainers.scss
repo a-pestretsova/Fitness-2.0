@@ -23,6 +23,7 @@
 
 .trainers__info {
   position: relative;
+  cursor: pointer;
 
   h4 {
     position: absolute;
@@ -40,8 +41,28 @@
   }
 }
 
+.trainers__info:hover img {
+  // background-color: rgba(16, 38, 84, 0.89);
+}
+
+.trainers__info:hover .trainers__text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(20px);
+  display: block;
+}
+
 .trainers__text {
   display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-default-white;
+
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .trainers__btn {
