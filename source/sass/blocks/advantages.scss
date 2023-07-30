@@ -1,7 +1,10 @@
+.advantages {
+  background-color: $color-light-white;
+}
+
 .advantages__wrapper {
   padding-top: 129px;
   padding-bottom: 129px;
-  background-color: $color-light-white;
 
   @include vp-1199 {
     padding-top: 89px;

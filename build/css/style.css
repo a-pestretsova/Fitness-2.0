@@ -2379,10 +2379,13 @@ button,
   left: 47px;
 }
 
+.advantages {
+  background-color: #F8F9FC;
+}
+
 .advantages__wrapper {
   padding-top: 129px;
   padding-bottom: 129px;
-  background-color: #F8F9FC;
 }
 @media (max-width: 1199px) {
   .advantages__wrapper {
