@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Фитнес центр «Supergym»">
+    <meta name="description" content="Фитнес-центр «Supergym»">
     <title>Фитнес 2.0</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
@@ -21,9 +21,9 @@
               <h1 class="visually-hidden">Фитнес центр «Supergym».</h1>
               <a class="main-header__logo-link" href="index.html">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="img/logotype.svg" width="69" height="24">
-                  <source media="(max-width: 1199px)" srcset="img/logotype.svg" width="82" height="17">
-                  <img src="./img/logotype.svg" width="120" height="23" alt="Фитнес центр «Supergym».">
+                  <source media="(max-width: 767px)" srcset="img/sprite/logotype.svg" width="69" height="24">
+                  <source media="(max-width: 1199px)" srcset="img/sprite/logotype.svg" width="82" height="17">
+                  <img src="./img/sprite/logotype.svg" width="120" height="23" alt="Фитнес центр «Supergym».">
                 </picture>
               </a>
             </section>
@@ -48,8 +48,11 @@
           <a href="#gym-pass"><button class="hero__btn btn" href="#">Купить абонемент</button></a>
           <div class="hero__photo">
             <picture>
-              <source media="(max-width: 1199px)" srcset="./img/hero-tablet.png" width="324" height="390">
-              <img src="./img/hero-desktop.png" width="500" height="556" alt="Изображение тренера фитнес центра «Supergym».">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero-tablet.webp 1x, ./img/hero-tablet@2x.webp 2x" width="324" height="390">
+              <source type="image/webp" srcset="./img/hero-desktop.webp 1x, ./img/hero-desktop@2x.webp 2x" width="500" height="556">
+
+              <source media="(max-width: 1199px)" srcset="./img/hero-tablet.png 1x, ./img/hero-tablet@2x.png 2x" width="324" height="390">
+              <img src="./img/hero-desktop.png" srcset="./img/hero-desktop@2x.png" width="500" height="556" alt="Изображение тренера фитнес центра «Supergym».">
             </picture>
           </div>
         </div>
@@ -70,9 +73,13 @@
             </div>
 
             <picture>
-              <source media="(max-width: 767px)" srcset="img/intro-mobile.jpg" width="320" height="313">
-              <source media="(max-width: 1199px)" srcset="img/intro-tablet.jpg" width="678" height="345">
-              <img src="./img/intro-desktop.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/intro-mobile.webp 1x, ./img/intro-mobile@2x.webp 2x" width="320" height="313">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/intro-tablet.webp 1x, ./img/intro-tablet@2x.webp 2x" width="678" height="345">
+              <source type="image/webp" srcset="./img/intro-desktop.webp 1x, ./img/intro-desktop@2x.webp 2x" width="660" height="401">
+
+              <source media="(max-width: 767px)" srcset="./img/intro-mobile.jpg 1x, ./img/intro-mobile@2x.jpg 2x" width="320" height="313">
+              <source media="(max-width: 1199px)" srcset="./img/intro-tablet.jpg 1x, ./img/intro-tablet@2x.jpg 2x" width="678" height="345">
+              <img src="./img/intro-desktop.jpg" srcset="./img/intro-desktop@2x.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
             </picture>
 
             <video class="intro__video" width="364" height="228" muted preload="auto" playsinline poster="./img/video-poster.png">
@@ -193,14 +200,18 @@
                 <dt>Время</dt>
                 <dd>12:00</dd>
               </dl>
-              <p>Ежегодные соревнования по CrossFit</p>
+              <p>Ежегодные соревнования по&nbsp;CrossFit</p>
               <button class="games__btn btn" href="#">Заполнить заявку</button>
             </div>
 
             <picture>
-              <source media="(max-width: 767px)" srcset="img/games-mobile.jpg" width="290" height="292">
-              <source media="(max-width: 1199px)" srcset="img/games-tablet.jpg" width="386" height="292">
-              <img src="./img/games-desktop.jpg" width="660" height="500" alt="Изображение спортсмена, удоряющего рукой по белому порошку.">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/games-mobile.webp 1x, ./img/games-mobile@2x.webp 2x" width="290" height="292">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/games-tablet.webp 1x, ./img/games-tablet@2x.webp 2x" width="386" height="292">
+              <source type="image/webp" srcset="./img/games-desktop.webp 1x, ./img/games-desktop@2x.webp 2x" width="660" height="500">
+
+              <source media="(max-width: 767px)" srcset="./img/games-mobile.jpg 1x, ./img/games-mobile@2x.jpg 2x" width="290" height="292">
+              <source media="(max-width: 1199px)" srcset="./img/games-tablet.jpg 1x, ./img/games-tablet@2x.jpg 2x" width="386" height="292">
+              <img src="./img/games-desktop.jpg" srcset="./img/games-desktop@2x.jpg" width="660" height="500" alt="Изображение спортсмена, удоряющего рукой по белому порошку.">
             </picture>
           </div>
         </section>
@@ -234,9 +245,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-one.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-one.jpg" width="268" height="294">
-                      <img src="./img/trainer-one.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-one.jpg 1x, ./img/trainer-one@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-one.jpg 1x, ./img/trainer-one@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-one.jpg" srcset="./img/trainer-one@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -253,9 +268,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-two.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-two.jpg" width="268" height="294">
-                      <img src="./img/trainer-two.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-two.jpg 1x, ./img/trainer-two@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-two.jpg 1x, ./img/trainer-two@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-two.jpg" srcset="./img/trainer-two@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -272,9 +291,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-three.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-three.jpg" width="268" height="294">
-                      <img src="./img/trainer-three.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-three.jpg 1x, ./img/trainer-three@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-three.jpg 1x, ./img/trainer-three@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-three.jpg" srcset="./img/trainer-three@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -291,9 +314,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-four.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-four.jpg" width="268" height="294">
-                      <img src="./img/trainer-four.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-four.jpg 1x, ./img/trainer-four@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-four.jpg 1x, ./img/trainer-four@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-four.jpg" srcset="./img/trainer-four@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -310,9 +337,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-one.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-one.jpg" width="268" height="294">
-                      <img src="./img/trainer-one.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-one.webp 1x, ./img/trainer-one@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-one.jpg 1x, ./img/trainer-one@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-one.jpg 1x, ./img/trainer-one@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-one.jpg" srcset="./img/trainer-one@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -329,9 +360,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-two.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-two.jpg" width="268" height="294">
-                      <img src="./img/trainer-two.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-two.webp 1x, ./img/trainer-two@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-two.jpg 1x, ./img/trainer-two@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-two.jpg 1x, ./img/trainer-two@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-two.jpg" srcset="./img/trainer-two@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -348,9 +383,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-three.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-three.jpg" width="268" height="294">
-                      <img src="./img/trainer-three.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-three.webp 1x, ./img/trainer-three@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-three.jpg 1x, ./img/trainer-three@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-three.jpg 1x, ./img/trainer-three@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-three.jpg" srcset="./img/trainer-three@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -367,9 +406,13 @@
                       </ul>
                     </div>
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/trainer-four.jpg" width="226" height="274">
-                      <source media="(max-width: 1199px)" srcset="img/trainer-four.jpg" width="268" height="294">
-                      <img src="./img/trainer-four.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="226" height="274">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="268" height="294">
+                      <source type="image/webp" srcset="./img/trainer-four.webp 1x, ./img/trainer-four@2x.webp 2x" width="260" height="294">
+
+                      <source media="(max-width: 767px)" srcset="img/trainer-four.jpg 1x, ./img/trainer-four@2x.jpg 2x" width="226" height="274">
+                      <source media="(max-width: 1199px)" srcset="img/trainer-four.jpg 1x, ./img/trainer-four@2x.jpg 2x" width="268" height="294">
+                      <img src="./img/trainer-four.jpg" srcset="./img/trainer-four@2x.jpg" width="260" height="294" alt="Изображение тренера фитнес центра «Supergym».">
                     </picture>
                   </div>
                 </div>
@@ -445,9 +488,13 @@
                 <button class="promo__btn btn" href="#">Подробнее</button>
               </div>
               <picture>
-                <source media="(max-width: 767px)" srcset="./img/promo-mobile.jpg" width="290" height="299">
-                <source media="(max-width: 1199px)" srcset="./img/promo-tablet.jpg" width="399" height="462">
-                <img src="./img/promo-desktop.jpg" width="280" height="462" alt="Изображение девушки в спортивной форме на фоне голубого неба.">
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/promo-mobile.webp 1x, ./img/promo-mobile@2x.webp 2x" width="290" height="299">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="./img/promo-tablet.webp 1x, ./img/promo-tablet@2x.webp 2x" width="399" height="462">
+                <source type="image/webp" srcset="./img/promo-desktop.webp 1x, ./img/promo-desktop@2x.webp 2x" width="280" height="462">
+
+                <source media="(max-width: 767px)" srcset="./img/promo-mobile.jpg 1x, ./img/promo-mobile@2x.jpg 2x" width="290" height="299">
+                <source media="(max-width: 1199px)" srcset="./img/promo-tablet.jpg 1x, ./img/promo-tablet@2x.jpg 2x" width="399" height="462">
+                <img src="./img/promo-desktop.jpg" srcset="./img/promo-desktop@2x.jpg" width="280" height="462" alt="Изображение девушки в спортивной форме на фоне голубого неба.">
               </picture>
             </div>
 
@@ -456,14 +503,14 @@
                 <div class="promo__aside promo__aside--time">
                   <h3>Месяц бесплатно</h3>
                   <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
-                  <a class="promo__btn btn" href="#">Подробнее</a>
+                  <button class="promo__btn promo__btn--aside btn" href="#">Подробнее</button>
                 </div>
               </article>
               <article>
                 <div class="promo__aside promo__aside--discount">
                   <h3>Скидка 20%</h3>
                   <p>Корпоративный фитнес с&nbsp;командой</p>
-                  <a class="promo__btn btn" href="#">Подробнее</a>
+                  <button class="promo__btn promo__btn--aside btn" href="#">Подробнее</button>
                 </div>
               </article>
             </div>
@@ -475,9 +522,9 @@
         <div class="main-footer__wrapper container">
           <a class="main-footer__logo-link" href="index.html">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/logotype.svg" width="68" height="15">
-              <source media="(max-width: 1199px)" srcset="img/logotype.svg" width="80" height="18">
-              <img src="./img/logotype.svg" width="88" height="32" alt="Фитнес центр «Supergym».">
+              <source media="(max-width: 767px)" srcset="img/sprite/logotype.svg" width="68" height="15">
+              <source media="(max-width: 1199px)" srcset="img/sprite/logotype.svg" width="80" height="18">
+              <img src="./img/sprite/logotype.svg" width="88" height="32" alt="Фитнес центр «Supergym».">
             </picture>
           </a>
 
