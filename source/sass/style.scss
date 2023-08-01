@@ -2,6 +2,8 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/data-tabs";
+@import "vendor/data-accordion";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -31,12 +33,12 @@
 @import "blocks/intro";
 @import "blocks/gym-pass";
 @import "blocks/tabs";
-@import "blocks/data-tabs";
 @import "blocks/product";
 @import "blocks/games";
 @import "blocks/trainers";
 @import "blocks/advantages";
 @import "blocks/promo";
+@import "blocks/questions";
 
 // ---------------------------------
 

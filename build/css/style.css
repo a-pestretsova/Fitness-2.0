@@ -314,6 +314,64 @@ template {
   display: none;
 }
 
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+}
+
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -1871,48 +1929,6 @@ button,
   width: 100%;
 }
 
-[data-tabs=parent] {
-  overflow: hidden;
-}
-[data-tabs=parent].no-transition > [data-tabs=control],
-[data-tabs=parent].no-transition > [data-tabs=content],
-[data-tabs=parent].no-transition > [data-tabs=element] {
-  -webkit-transition: none;
-  transition: none;
-}
-[data-tabs=parent].no-transition-global [data-tabs=control],
-[data-tabs=parent].no-transition-global [data-tabs=content],
-[data-tabs=parent].no-transition-global [data-tabs=element] {
-  -webkit-transition: none;
-  transition: none;
-}
-
-[data-tabs=parent] [data-tabs=content] {
-  position: relative;
-}
-
-[data-tabs=element] {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
-  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
-}
-
-[data-tabs=element].for-load {
-  position: static;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: none;
-  transition: none;
-}
-
-[data-tabs=element].is-active {
-  z-index: 1;
-  visibility: visible;
-  opacity: 1;
-}
-
 .product__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3084,6 +3100,96 @@ button,
 }
 .promo__aside p {
   letter-spacing: 0.2px;
+}
+
+.questions {
+  padding-top: 145px;
+  padding-bottom: 120px;
+}
+.questions h2 {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 54px;
+  letter-spacing: 1.62px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+}
+
+.questions__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.questions__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.questions__btn {
+  display: inline-block;
+  width: 260px;
+  margin-bottom: 12px;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  text-transform: capitalize;
+  text-align: center;
+}
+.questions__btn:hover {
+  border: 1px solid #102654;
+}
+.questions__btn:active {
+  padding: 17px 0;
+  color: #ffffff;
+  background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  border: none;
+}
+
+.questions__list {
+  width: 860px;
+  margin-left: 40px;
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
+}
+.questions__list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 35px;
+}
+.questions__item h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.questions__content {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 147%;
+  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+}
+.questions__content p {
+  width: 660px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.questions__accordion-btn {
+  padding: 0;
 }
 
 /* @mixin hover-focus {
