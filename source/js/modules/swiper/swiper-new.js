@@ -4,17 +4,14 @@ export const newSwiper = () => {
   const trainersSwiper = new Swiper('.trainers__swiper', {
     loop: true,
     grabCursor: 'true',
-
     navigation: {
       nextEl: '.trainers__btn--next',
       prevEl: '.trainers__btn--prev',
     },
     mousewheel: false,
     keyboard: true,
-
     wrapperClass: 'swiper-wrapper',
     slideClass: 'swiper-slide',
-
     breakpoints: {
       1320: {
         slidesPerView: 4,
@@ -78,5 +75,20 @@ export const newSwiper = () => {
       },
     },
   });
+
+  const reviewsSwiper = new Swiper('.reviews__swiper', {
+    grabCursor: 'true',
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.reviews__btn--next',
+      prevEl: '.reviews__btn--prev',
+    },
+    mousewheel: false,
+    keyboard: true,
+    wrapperClass: 'swiper-wrapper',
+    slideClass: 'swiper-slide',
+  });
+
   trainersSwiper.enable();
+  reviewsSwiper.enable();
 };
