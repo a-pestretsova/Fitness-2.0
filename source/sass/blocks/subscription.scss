@@ -1,0 +1,59 @@
+.subscription-container {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, $color-blue 50%, $color-default-white 50%);
+}
+
+.subscription {
+  width: 683px;
+  color: $color-default-white;
+}
+
+.subscription__wrapper {
+  padding-top: 87px;
+  padding-bottom: 70px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 54px;
+    letter-spacing: 2.2px;
+    font-family: $ff-alumni;
+  }
+}
+
+.subscription__form {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 190px);
+    grid-template-rows: auto auto;
+    gap: 30px;
+  }
+}
+
+.subscription__form-input {
+  input {
+    width: 100%;
+    padding: 14px 0 5px;
+    color: $color-default-white;
+    border: none;
+    border-bottom: 1px solid $color-silver;
+    background: none;
+
+    &::placeholder {
+      font-family: $ff-roboto;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $color-default-white;
+    }
+  }
+}
+
+.subscription__btn {
+  padding: 18px 166px;
+  font-size: 12px;
+  border: 3px solid $color-default-white;
+  background-color: transparent;
+  color: $color-default-white;
+}

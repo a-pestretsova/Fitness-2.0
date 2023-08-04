@@ -766,8 +766,8 @@
                   <source media="(max-width: 767px)" srcset="./img/reviews-mobile.jpg 1x, ./img/reviews-mobile@2x.jpg 2x" width="68" height="68">
                   <img src="./img/reviews-desktop.jpg" srcset="./img/reviews-desktop@2x.jpg" width="80" height="80" alt="Аватар комментатора.">
                 </picture>
+                <h3>Анна Орлова</h3>
                 <div class="reviews__text">
-                  <h3>Анна Орлова</h3>
                   <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто,
                     тренажеры
                     обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&raquo;
@@ -781,8 +781,8 @@
                   <source media="(max-width: 767px)" srcset="./img/reviews-mobile.png 1x, ./img/reviews-mobile@2x.png 2x" width="68" height="68">
                   <img src="./img/reviews-desktop.png" srcset="./img/reviews-desktop@2x.png" width="80" height="80" alt="Аватар комментатора.">
                 </picture>
+                <h3>Анна Орлова</h3>
                 <div class="reviews__text">
-                  <h3>Анна Орлова</h3>
                   <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто,
                     тренажеры
                     обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&raquo;
@@ -792,6 +792,57 @@
             </div>
           </div>
         </section>
+
+        <div class="subscription-container">
+          <section class="subscription">
+            <div class="subscription__wrapper container">
+              <h2>Бесплатное занятие</h2>
+              <div class="subscription__form" data-form-validate data-callback="base">
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                  <div class="subscription__form-input" data-required data-validate-type="text" data-limitation="letters-and-digit">
+                    <input type="text" name="name" placeholder="Имя" required>
+                  </div>
+                  <div class="subscription__form-input" data-required data-validate-type="phone" data-limitation="digit">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                  </div>
+                  <button class="subscription__btn btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="contacts">
+            <div class="contacts__wrapper container">
+              <h2>Контакты</h2>
+              <ul>
+                <li>
+                  <div class="contacts__item">
+                    <h3>Адрес:</h3>
+                    <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября,&nbsp;7</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="contacts__item">
+                    <h3>График работы:</h3>
+                    <p>Пн-Вс: с 8:00 до 22:00</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="contacts__item">
+                    <h3>Телефон:</h3>
+                    <a href="tel:+78005555555">8-800-555-55-55</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="contacts__item">
+                    <h3>Email:</h3>
+                    <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </main>
 
       <footer class="main-footer">

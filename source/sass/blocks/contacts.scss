@@ -1,0 +1,23 @@
+.contacts {
+  width: 683px;
+}
+
+
+.contacts__wrapper {
+  padding: 79px 120px 70px;
+  border-top: 1px solid $color-silver;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 54px;
+    letter-spacing: 2.2px;
+    font-family: $ff-alumni;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
