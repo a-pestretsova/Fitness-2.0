@@ -170,10 +170,9 @@
     background-repeat: no-repeat;
     content: "";
 
-    // @include vp-1365 {
-    //   left: 50%;
-    //   transform: translateX(-40%);
-    // }
+    @include hover {
+      background-image: url("../img/sprite/play-hover.svg");
+    }
 
     @include vp-1199 {
       top: 634px;
@@ -187,5 +186,15 @@
       top: 734px;
       transform: translateX(-35px);
     }
+  }
+
+  @include hover-focus {
+    &::before {
+      background-image: url("../img/sprite/play-hover.svg");
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }

@@ -1379,6 +1379,23 @@ button,
     padding: 20px 82px;
   }
 }
+@media (hover: hover) {
+  .hero__btn:hover:not(.focus-visible) {
+    color: #103AAE;
+    background-color: #ffffff;
+  }
+}
+.hero__btn.focus-visible:focus {
+  color: #103AAE;
+  background-color: #ffffff;
+}
+.hero__btn:active:not(.focus-visible):not(.focus-visible) {
+  color: #102654;
+  background-color: #ffffff;
+}
+.hero__btn:disabled {
+  opacity: 0.5;
+}
 
 .hero__photo {
   position: absolute;
@@ -1776,6 +1793,11 @@ button,
   background-repeat: no-repeat;
   content: "";
 }
+@media (hover: hover) {
+  .intro__video-btn::before:hover:not(.focus-visible) {
+    background-image: url("../img/sprite/play-hover.svg");
+  }
+}
 @media (max-width: 1199px) {
   .intro__video-btn::before {
     top: 634px;
@@ -1794,6 +1816,17 @@ button,
         -ms-transform: translateX(-35px);
             transform: translateX(-35px);
   }
+}
+@media (hover: hover) {
+  .intro__video-btn:hover:not(.focus-visible)::before {
+    background-image: url("../img/sprite/play-hover.svg");
+  }
+}
+.intro__video-btn.focus-visible:focus::before {
+  background-image: url("../img/sprite/play-hover.svg");
+}
+.intro__video-btn:disabled {
+  opacity: 0.5;
 }
 
 .gym-pass {
@@ -1923,6 +1956,9 @@ button,
   border-bottom: 2px solid #D10A42;
   pointer-events: none;
 }
+.tabs__control:disabled {
+  opacity: 0.3;
+}
 
 .tabs__element {
   width: 100%;
@@ -1990,36 +2026,8 @@ button,
     padding: 45px 42px 55px;
   }
 }
-.product__item::before {
-  position: absolute;
-  top: 202px;
-  left: 78px;
-  content: "5000";
-  color: #E8E8E8;
-  font-size: 100px;
-  z-index: -1;
-}
-@media (max-width: 1199px) {
-  .product__item::before {
-    top: 206px;
-    left: 27%;
-  }
-}
-@media (max-width: 767px) {
-  .product__item::before {
-    top: 161px;
-    left: 22%;
-    font-size: 80px;
-  }
-}
-.product__item:nth-child(2)::before {
-  content: "1700";
-}
-.product__item:nth-child(3)::before {
-  content: "2700";
-}
 .product__item:hover {
-  padding: 61px 71px;
+  padding: 61.5px 70px;
   border: 6px solid #003EB7;
   -o-border-image: linear-gradient(#D10A42, #00359F) 30;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#D10A42), to(#00359F)) 30;
@@ -2029,7 +2037,6 @@ button,
   top: 196px;
   left: 72px;
 }
-
 .product__item h3 {
   margin-top: 0;
   margin-bottom: 15px;
@@ -2042,7 +2049,6 @@ button,
     font-size: 20px;
   }
 }
-
 .product__item p {
   margin-top: 0;
   margin-bottom: 102px;
@@ -2056,32 +2062,56 @@ button,
   }
 }
 
-.product__item span {
+.product__price {
   margin-top: 0;
-  margin-bottom: 66px;
+  text-align: center;
+}
+.product__price::before {
+  position: absolute;
+  top: 202px;
+  left: 78px;
+  content: attr(data-price);
+  color: #E8E8E8;
+  font-size: 100px;
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .product__price::before {
+    top: 206px;
+    left: 27%;
+  }
+}
+@media (max-width: 767px) {
+  .product__price::before {
+    top: 161px;
+    left: 22%;
+    font-size: 80px;
+  }
+}
+.product__price span {
+  margin-top: 0;
   color: #103AAE;
   font-size: 60px;
   font-weight: 700;
-  text-align: center;
 }
 @media (max-width: 1199px) {
-  .product__item span {
+  .product__price span {
     margin-bottom: 67px;
   }
 }
 @media (max-width: 767px) {
-  .product__item span {
+  .product__price span {
     margin-bottom: 55px;
     font-size: 48px;
   }
 }
-
-.product__item span mark {
+.product__price span mark {
   color: #102654;
   background-color: transparent;
 }
 
 .product__btn {
+  margin-top: 68px;
   border: 2px solid #1C3374;
 }
 @media (max-width: 1199px) {
@@ -2100,6 +2130,11 @@ button,
   color: #ffffff;
   border: none;
   background: linear-gradient(111deg, #ED0233 20%, #003EB7 80%);
+}
+
+.product__item:hover .product__price::before {
+  top: 197px;
+  left: 72px;
 }
 
 .games__wrapper {
@@ -2266,6 +2301,23 @@ button,
     font-size: 10px;
     border: 2px solid #ffffff;
   }
+}
+@media (hover: hover) {
+  .games__btn:hover:not(.focus-visible) {
+    color: #103AAE;
+    background-color: #ffffff;
+  }
+}
+.games__btn.focus-visible:focus {
+  color: #103AAE;
+  background-color: #ffffff;
+}
+.games__btn:active:not(.focus-visible):not(.focus-visible) {
+  color: #102654;
+  background-color: #ffffff;
+}
+.games__btn:disabled {
+  opacity: 0.5;
 }
 
 .trainers {

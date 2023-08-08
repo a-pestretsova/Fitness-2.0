@@ -24,6 +24,12 @@
   }
 }
 
+@mixin active-no-focus {
+  &:active:not(.focus-visible):not(.focus-visible) {
+    @content;
+  }
+}
+
 @mixin hover-focus {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {

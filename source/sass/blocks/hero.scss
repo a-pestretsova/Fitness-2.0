@@ -121,6 +121,20 @@
     transform: translateX(-145px);
     padding: 20px 82px;
   }
+
+  @include hover-focus {
+    color: $color-additional-blue;
+    background-color: $color-default-white;
+  }
+
+  @include active-no-focus {
+    color: $color-blue;
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .hero__photo {
