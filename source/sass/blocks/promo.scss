@@ -126,11 +126,35 @@
     margin-top: 19px;
   }
 
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    margin-top: 166px;
+    margin-left: -5px;
+    padding: 5px;
+    border: 1px solid $color-default-white;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &--aside {
     margin-top: 51px;
     color: $color-medium-blue;
     border-bottom: 1px solid $color-medium-blue;
     font-size: 11px;
+
+    @include focus {
+      margin-top: 41px;
+      margin-left: -5px;
+      padding: 5px;
+      border: 1px solid $color-medium-blue;
+      outline: none;
+    }
 
     @include vp-1199 {
       margin-top: 56px;

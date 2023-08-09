@@ -88,15 +88,20 @@
     font-size: 14px;
   }
 
-  &:hover {
+  @include hover-focus {
     border: 1px solid $color-blue;
+    outline: none;
   }
 
-  &:active {
+  @include active-no-focus {
     padding: 17px 0;
     color: $color-default-white;
     background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
     border: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
@@ -253,6 +258,23 @@
     }
   }
 
+  @include hover-focus {
+    background-color: $color-medium-blue;
+    outline: none;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &::before {
     position: absolute;
     top: 19px;
@@ -272,7 +294,7 @@
   &::after {
     position: absolute;
     top: 10px;
-    left: 19px;
+    left: 20px;
     width: 1px;
     height: 20px;
     background-color: $color-medium-blue;
@@ -300,9 +322,3 @@
     }
   }
 }
-
-// .questions__item button:last-child {
-//   @include vp-1199 {
-//     transform: translateY(10px);
-//   }
-// }

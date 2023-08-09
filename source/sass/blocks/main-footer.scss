@@ -16,13 +16,17 @@
     gap: 25px;
     column-count: 2;
   }
-}
 
-.main-footer__logo-link {
-  margin-top: 10px;
-
-  @include vp-1199 {
+  a {
     margin-top: 10px;
+
+    @include vp-1199 {
+      margin-top: 10px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 }
 

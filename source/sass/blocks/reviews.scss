@@ -82,7 +82,12 @@
 
 .reviews__btn {
   position: absolute;
-  bottom: 218px;
+  bottom: 208px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
 
   @include vp-1199 {
     bottom: 197px;
@@ -92,14 +97,36 @@
     bottom: 224px;
   }
 
+  @include hover-focus {
+    outline: 1px solid $color-blue;
+  }
+
+  @include active-no-focus {
+    background-color: $color-blue;
+
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
   svg {
+    position: absolute;
+    top: 10px;
+    stroke: $color-blue;
+
     @include vp-767 {
       height: 19px;
     }
   }
 
   &--next {
-    right: 25%;
+    right: 24%;
 
     @include vp-1199 {
       right: 45px;
@@ -108,10 +135,14 @@
     @include vp-767 {
       right: 10px;
     }
+
+    svg {
+      right: 18px;
+    }
   }
 
   &--prev {
-    left: 25%;
+    left: 24%;
 
     @include vp-1199 {
       left: 45px;
@@ -119,6 +150,10 @@
 
     @include vp-767 {
       left: 10px;
+    }
+
+    svg {
+      left: 15px;
     }
   }
 }

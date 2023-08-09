@@ -94,6 +94,47 @@
       font-weight: 400;
       color: $color-default-white;
     }
+
+    @include hover {
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:active,
+    &:focus {
+      padding-left: 15px;
+      border-bottom: none;
+      outline: 1px solid $color-default-white;
+
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  &.is-invalid {
+    position: relative;
+
+    input {
+      border-bottom: 1px solid $color-red-error;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 80px;
+      min-height: 20px;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      color: $color-red-error;
+      content: "Неверные данные";
+    }
   }
 }
 
@@ -111,5 +152,20 @@
   @include vp-767 {
     margin-top: 14px;
     padding: 18px 106px;
+  }
+
+  @include hover-focus {
+    color: $color-additional-blue;
+    background-color: $color-default-white;
+    outline: none;
+  }
+
+  @include active-no-focus {
+    color: $color-blue;
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }

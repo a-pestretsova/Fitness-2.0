@@ -1,27 +1,40 @@
-.social__list {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include vp-767 {
-    justify-content: start;
+.social {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
     padding: 0;
-    column-span: all;
+    list-style: none;
+
+    @include vp-767 {
+      justify-content: start;
+      padding: 0;
+      column-span: all;
+    }
   }
-}
 
-.social__item {
-  width: 25px;
-  height: 25px;
-}
+  li {
+    width: 25px;
+    height: 25px;
 
-.social__item:not(:last-child)  {
-  margin-right: 11px;
+    &:not(:last-child)  {
+      margin-right: 11px;
+    }
+  }
 }
 
 .social__link {
   padding: 4px;
   background-color: $color-default-white;
   border-radius: 50%;
+
+  &--ok {
+    padding: 4px 7px;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
 
   @include hover {
     background-color: $color-additional-blue;
@@ -30,12 +43,4 @@
   @include active {
     background-color: $color-blue;
   }
-}
-
-.social__link--ok {
-  padding: 4px 7px;
-}
-
-.social__link svg {
-  vertical-align: middle;
 }
