@@ -13,23 +13,24 @@
   @include vp-767 {
     padding: 70px 47px;
   }
-}
 
-.trainers__wrapper h2 {
-  margin-top: 0;
-  margin-bottom: 69px;
-  font-size: 54px;
-  font-family: $ff-alumni;
-  letter-spacing: 1.62px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 69px;
+    font-size: 54px;
+    font-family: $ff-alumni;
+    letter-spacing: 1.62px;
 
-  @include vp-1199 {
-    margin-bottom: 49px;
-    font-size: 42px;
-    text-align: center;
-  }
+    @include vp-1199 {
+      margin-bottom: 49px;
+      font-size: 42px;
+      text-align: center;
+    }
 
-  @include vp-767 {
-    font-size: 32px;
+    @include vp-767 {
+      margin-bottom: 52px;
+      font-size: 32px;
+    }
   }
 }
 
@@ -52,7 +53,7 @@
 
   h3 {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 30%;
     font-size: 15px;
     font-weight: 700;
@@ -129,34 +130,52 @@
   cursor: pointer;
 
   @include vp-1199 {
-    top: 313px;
+    top: 302px;
   }
 
   @include vp-767 {
-    top: 269px;
+    top: 263px;
+    width: 36px;
+    height: 36px;
   }
 
   &--next {
-    right: 106px;
+    right: 2%;
+
+    @include vp-1199 {
+      right: 4%;
+    }
 
     @include vp-767 {
-      right: 10px;
+      right: 1%;
     }
 
     svg {
       right: 18px;
+
+      @include vp-767 {
+        right: 8px;
+      }
     }
   }
 
   &--prev {
-    left: 106px;
+    left: 2%;
+
+    @include vp-1199 {
+      left: 4%;
+    }
 
     @include vp-767 {
-      left: 10px;
+      left: 0;
     }
 
     svg {
       left: 15px;
+
+      @include vp-767 {
+        left: 8px;
+      }
     }
   }
 
@@ -166,6 +185,7 @@
     stroke: $color-blue;
 
     @include vp-767 {
+      top: 8px;
       height: 20px;
     }
   }

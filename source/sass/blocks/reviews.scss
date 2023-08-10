@@ -1,15 +1,15 @@
 .reviews {
   position: relative;
-  padding-top: 145px;
+  padding-top: 140px;
   padding-bottom: 120px;
 
   @include vp-1199 {
-    padding-top: 80px;
+    padding-top: 83px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-top: 25px;
+    padding-top: 23px;
     padding-bottom: 70px;
   }
 
@@ -90,11 +90,13 @@
   cursor: pointer;
 
   @include vp-1199 {
-    bottom: 197px;
+    bottom: 191px;
   }
 
   @include vp-767 {
-    bottom: 224px;
+    bottom: 219px;
+    width: 36px;
+    height: 36px;
   }
 
   @include hover-focus {
@@ -121,6 +123,7 @@
     stroke: $color-blue;
 
     @include vp-767 {
+      top: 8px;
       height: 19px;
     }
   }
@@ -129,15 +132,19 @@
     right: 24%;
 
     @include vp-1199 {
-      right: 45px;
+      right: 3%;
     }
 
     @include vp-767 {
-      right: 10px;
+      right: 1%;
     }
 
     svg {
       right: 18px;
+
+      @include vp-767 {
+        right: 10px;
+      }
     }
   }
 
@@ -145,15 +152,19 @@
     left: 24%;
 
     @include vp-1199 {
-      left: 45px;
+      left: 4%;
     }
 
     @include vp-767 {
-      left: 10px;
+      left: 2%;
     }
 
     svg {
       left: 15px;
+
+      @include vp-767 {
+        left: 8px;
+      }
     }
   }
 }
