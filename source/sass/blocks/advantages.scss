@@ -70,7 +70,7 @@
   padding-bottom: 78px;
   grid-column: 1/2;
   grid-row: 1/2;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.20);
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1199 {
     padding-left: 0;
@@ -85,7 +85,7 @@
   padding-bottom: 78px;
   grid-column: 3/4;
   grid-row: 1/2;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.20);
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1199 {
     padding-bottom: 0;
@@ -318,9 +318,8 @@
 
   span {
     margin-top: 10px;
-    background: linear-gradient(129deg, #D10A42 0%, #0041CA 100%);
+    background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     font-size: 71px;
     font-weight: 700;

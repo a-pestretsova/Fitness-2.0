@@ -45,7 +45,7 @@
               <li>Кардио-зона </li>
             </ul>
           </div>
-          <a class="hero__btn btn" href="#gym-pass">Купить абонемент</a>
+          <a class="hero__btn btn" href="#gym-link">Купить абонемент</a>
           <div class="hero__photo">
             <picture>
               <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero-tablet.webp 1x, ./img/hero-tablet@2x.webp 2x" width="324" height="390">
@@ -89,7 +89,7 @@
           </div>
         </section>
 
-        <section class="gym-pass" id="gym-pass">
+        <section class="gym-pass" id="gym-link">
           <div class="gym-pass__wrapper container">
             <h2>Абонементы</h2>
             <div class="gym-pass__tabs tabs" data-tabs="parent" data-delay="300">
@@ -817,10 +817,10 @@
               <div class="subscription__form" data-form-validate data-callback="base">
                 <form action="https://echo.htmlacademy.ru/" method="post">
                   <div class="subscription__form-input" data-required data-validate-type="text" data-limitation="letters-and-digit">
-                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="text" name="name" placeholder="Имя" aria-label="Имя." required>
                   </div>
                   <div class="subscription__form-input" data-required data-validate-type="phone" data-limitation="digit">
-                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="tel" name="phone" placeholder="Телефон" aria-label="Телефон." required>
                   </div>
                   <button class="subscription__btn btn" type="submit">Отправить</button>
                 </form>
