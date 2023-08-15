@@ -24,7 +24,7 @@
     text-align: center;
 
     @include vp-1199 {
-      margin-bottom: 64px;
+      margin-bottom: 67px;
       font-size: 42px;
     }
 
@@ -160,6 +160,7 @@
     font-weight: 700;
 
     @include vp-1199 {
+      margin-top: -3px;
       font-size: 18px;
     }
   }
@@ -240,7 +241,7 @@
 
   @include vp-1199 {
     width: 442px;
-    margin: 0 auto;
+    margin-left: 119px;
     padding: 51px 135px 39px;
   }
 
@@ -258,7 +259,7 @@
     letter-spacing: -0.1px;
 
     @include vp-1199 {
-      margin-left: 35px;
+      margin-left: 25px;
       font-size: 20px;
     }
 
@@ -277,6 +278,7 @@
 
     @include vp-1199 {
       margin-left: 0;
+      line-height: 62%;
     }
 
     @include vp-767 {

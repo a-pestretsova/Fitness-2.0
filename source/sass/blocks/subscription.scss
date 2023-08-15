@@ -1,18 +1,38 @@
-.subscription-container {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid $color-silver;
+.subscription-background {
+  position: relative;
   background: linear-gradient(to right, $color-blue 50%, $color-default-white 50%);
 
   @include vp-1199 {
-    flex-direction: column;
-    align-items: center;
-    border-top: none;
     background: linear-gradient(to top, $color-default-white 52%, $color-blue 48%);
   }
 
   @include vp-767 {
     background: linear-gradient(to top, $color-default-white 57%, $color-blue 43%);
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-silver;
+    content: "";
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.subscription-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -29,7 +49,7 @@
   padding-bottom: 65px;
 
   @include vp-1199 {
-    margin-left: -28px;
+    margin-left: -30px;
     padding: 75px 133px 38px;
   }
 

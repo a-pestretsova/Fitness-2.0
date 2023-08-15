@@ -18,6 +18,12 @@
   font-weight: 700;
   z-index: 3;
 
+  &:nth-child(2) {
+    @include vp-1199 {
+      margin-bottom: 32px;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 40px;
 
@@ -123,6 +129,8 @@
     }
 
     mark {
+      font-family: $ff-rouble;
+      font-weight: 600;
       color: $color-blue;
       background-color: transparent;
     }

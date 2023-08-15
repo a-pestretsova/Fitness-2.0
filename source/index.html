@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple-favicon.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font">
     <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff2" as="font">
   </head>
@@ -44,8 +47,9 @@
               <li>Групповые занятия</li>
               <li>Кардио-зона </li>
             </ul>
+            <a class="hero__text-btn btn" href="#gym-link">Купить абонемент</a>
           </div>
-          <a class="hero__btn btn" href="#gym-link">Купить абонемент</a>
+
           <div class="hero__photo">
             <picture>
               <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero-tablet.webp 1x, ./img/hero-tablet@2x.webp 2x" width="324" height="390">
@@ -72,20 +76,24 @@
               </span>
             </div>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/intro-mobile.webp 1x, ./img/intro-mobile@2x.webp 2x" width="320" height="313">
-              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/intro-tablet.webp 1x, ./img/intro-tablet@2x.webp 2x" width="678" height="345">
-              <source type="image/webp" srcset="./img/intro-desktop.webp 1x, ./img/intro-desktop@2x.webp 2x" width="660" height="401">
+            <div class="intro__media">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/intro-mobile.webp 1x, ./img/intro-mobile@2x.webp 2x" width="320" height="313">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="./img/intro-tablet.webp 1x, ./img/intro-tablet@2x.webp 2x" width="678" height="345">
+                <source type="image/webp" srcset="./img/intro-desktop.webp 1x, ./img/intro-desktop@2x.webp 2x" width="660" height="401">
 
-              <source media="(max-width: 767px)" srcset="./img/intro-mobile.jpg 1x, ./img/intro-mobile@2x.jpg 2x" width="320" height="313">
-              <source media="(max-width: 1199px)" srcset="./img/intro-tablet.jpg 1x, ./img/intro-tablet@2x.jpg 2x" width="678" height="345">
-              <img src="./img/intro-desktop.jpg" srcset="./img/intro-desktop@2x.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
-            </picture>
+                <source media="(max-width: 767px)" srcset="./img/intro-mobile.jpg 1x, ./img/intro-mobile@2x.jpg 2x" width="320" height="313">
+                <source media="(max-width: 1199px)" srcset="./img/intro-tablet.jpg 1x, ./img/intro-tablet@2x.jpg 2x" width="678" height="345">
+                <img src="./img/intro-desktop.jpg" srcset="./img/intro-desktop@2x.jpg" width="660" height="401" alt="Изображение зала в фитнес центре «Supergym».">
+              </picture>
 
-            <video class="intro__video" width="364" height="228" muted preload="auto" playsinline poster="./img/video-poster.png">
-              <source src="./img/intro-video.mp4" type="video/mp4">
-            </video>
-            <button class="intro__video-btn btn"></button>
+              <div class="intro__video-wrapper">
+                <video class="intro__video" width="364" height="228" muted preload="auto" playsinline poster="./img/video-poster.png">
+                  <source src="./img/intro-video.mp4" type="video/mp4">
+                </video>
+                <button class="intro__video-btn btn"></button>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -810,55 +818,57 @@
           </div>
         </section>
 
-        <div class="subscription-container">
-          <section class="subscription">
-            <div class="subscription__wrapper container">
-              <h2>Бесплатное занятие</h2>
-              <div class="subscription__form" data-form-validate data-callback="base">
-                <form action="https://echo.htmlacademy.ru/" method="post">
-                  <div class="subscription__form-input" data-required data-validate-type="text" data-limitation="letters-and-digit">
-                    <input type="text" name="name" placeholder="Имя" aria-label="Имя." required>
-                  </div>
-                  <div class="subscription__form-input" data-required data-validate-type="phone" data-limitation="digit">
-                    <input type="tel" name="phone" placeholder="Телефон" aria-label="Телефон." required>
-                  </div>
-                  <button class="subscription__btn btn" type="submit">Отправить</button>
-                </form>
+        <div class="subscription-background">
+          <div class="subscription-container container">
+            <section class="subscription">
+              <div class="subscription__wrapper">
+                <h2>Бесплатное занятие</h2>
+                <div class="subscription__form" data-form-validate data-callback="base">
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <div class="subscription__form-input" data-required data-validate-type="text">
+                      <input type="text" name="name" placeholder="Имя" aria-label="Имя." required>
+                    </div>
+                    <div class="subscription__form-input" data-required data-validate-type="phone">
+                      <input type="tel" name="phone" placeholder="Телефон" aria-label="Телефон." required>
+                    </div>
+                    <button class="subscription__btn btn" type="submit">Отправить</button>
+                  </form>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="contacts">
-            <div class="contacts__wrapper container">
-              <h2>Контакты</h2>
-              <ul>
-                <li>
-                  <div class="contacts__item">
-                    <h3>Адрес:</h3>
-                    <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября,&nbsp;7</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="contacts__item">
-                    <h3>График работы:</h3>
-                    <p>Пн-Вс: с 8:00 до 22:00</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="contacts__item">
-                    <h3>Телефон:</h3>
-                    <a href="tel:+78005555555">8-800-555-55-55</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="contacts__item">
-                    <h3>Email:</h3>
-                    <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
+            <section class="contacts">
+              <div class="contacts__wrapper">
+                <h2>Контакты</h2>
+                <ul>
+                  <li>
+                    <div class="contacts__item">
+                      <h3>Адрес:</h3>
+                      <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября,&nbsp;7</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contacts__item">
+                      <h3>График работы:</h3>
+                      <p>Пн-Вс: с 8:00 до 22:00</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contacts__item">
+                      <h3>Телефон:</h3>
+                      <a href="tel:+78005555555">8-800-555-55-55</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contacts__item">
+                      <h3>Email:</h3>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
 

@@ -3,15 +3,24 @@
 }
 
 .tabs__controls {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 345px;
+  width: fit-content;
   margin: 0 auto;
   margin-bottom: 39px;
 
   @include vp-767 {
     width: 290px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    content: "";
   }
 }
 
@@ -31,7 +40,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(120, 120, 120, 0.20);
+    background-color: transparent;
     content: "";
   }
 
@@ -48,7 +57,7 @@
     padding: 0 47px 17px;
 
     @include vp-1199 {
-      padding: 0 50px 17px;
+      padding: 0 53px 17px;
     }
 
     @include vp-767 {
