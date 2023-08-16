@@ -17,22 +17,7 @@
 
   @include vp-767 {
     padding-top: 70px;
-    padding-bottom: 630px;
-  }
-
-  img {
-    @include vp-1199 {
-      margin: 0 auto;
-    }
-
-    @include vp-767 {
-      position: absolute;
-      top: 335px;
-      left: 0;
-      width: 100%;
-      height: 313px;
-      margin: 0;
-    }
+    padding-bottom: 79px;
   }
 }
 
@@ -46,6 +31,8 @@
 
   @include vp-767 {
     width: 274px;
+    margin-bottom: 33px;
+    transform: translateX(-8px);
   }
 
   h2 {
@@ -127,6 +114,25 @@
 .intro__media {
   position: relative;
   z-index: 0;
+
+  @include vp-767 {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 40px;
+    width: 100vw;
+  }
+
+  img {
+    @include vp-1199 {
+      margin: 0 auto;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      height: 313px;
+      object-fit: cover;
+    }
+  }
 }
 
 .intro__video-wrapper {
@@ -140,12 +146,24 @@
     top: 262px;
     left: 205px;
   }
+
+  @include vp-767 {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .intro__video {
   @include vp-1199 {
     width: 266px;
     height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-height: 167px;
+    object-fit: cover;
   }
 }
 
@@ -167,7 +185,7 @@
   }
 
   @include vp-767 {
-    left: 34%;
+    right: 116px;
   }
 
   &::before {
@@ -193,8 +211,8 @@
     }
 
     @include vp-767 {
-      top: 734px;
-      transform: translateX(-35px);
+      top: -2px;
+      left: 7px;
     }
   }
 
