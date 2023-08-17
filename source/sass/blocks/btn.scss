@@ -14,9 +14,14 @@
   text-transform: uppercase;
 
   transition: opacity $trans-default;
+  user-select: none;
 
   &--red {
     background-color: $color-torch-red;
+  }
+
+  &.focus-visible {
+    outline: 0;
   }
 
   &:disabled {

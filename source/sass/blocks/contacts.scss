@@ -2,7 +2,13 @@
   width: 683px;
   margin-left: 170px;
 
+  @include vp-1365 {
+    width: 517px;
+    margin-left: 50px;
+  }
+
   @include vp-1199 {
+    width: 683px;
     margin-left: 0;
   }
 
@@ -120,6 +126,10 @@
   a {
     @include vp-1199 {
       font-size: 17px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
     }
   }
 }

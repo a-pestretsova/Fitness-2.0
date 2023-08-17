@@ -45,15 +45,14 @@
     }
 
     @include hover {
-      box-shadow: 0px 2px 0 0px rgba(187, 187, 187, 0.25);
-    }
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 10px;
+      text-decoration-color: #bfbfbf;
 
-    @include focus {
-      box-shadow: 1px 1px 1px 1px $color-default-white;
-    }
-
-    @include active {
-      box-shadow: none;
+      &:active {
+        text-decoration: none;
+      }
     }
 
     &:disabled {
@@ -67,6 +66,11 @@
 
       @include vp-767 {
         font-size: 15px;
+      }
+
+      @include focus {
+        padding: 5px;
+        outline: 1px solid $color-default-white;
       }
     }
   }

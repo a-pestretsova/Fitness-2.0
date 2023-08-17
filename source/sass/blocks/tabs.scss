@@ -82,6 +82,14 @@
     }
   }
 
+  &.focus-visible {
+    outline: none;
+
+    &::after {
+      background-color: $color-pink;
+    }
+  }
+
   &:disabled {
     opacity: 0.3;
   }

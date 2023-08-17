@@ -120,6 +120,10 @@
     border-top: 1px solid rgba(28, 51, 116, 0.20);
     list-style: none;
 
+    @include vp-1365 {
+      width: 790px;
+    }
+
     @include vp-1199 {
       width: 100%;
     }
