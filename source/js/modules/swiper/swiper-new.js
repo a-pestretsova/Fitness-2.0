@@ -53,22 +53,6 @@ export const newSwiper = () => {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      700: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      650: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      600: {
-        slidesPerView: 1,
-        spaceBetween: 80,
-      },
-      500: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
       320: {
         slidesPerView: 1,
         spaceBetween: 94,
@@ -87,6 +71,21 @@ export const newSwiper = () => {
     keyboard: true,
     wrapperClass: 'swiper-wrapper',
     slideClass: 'swiper-slide',
+    speed: 900,
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+        spaceBetween: 5000,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 5000,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5000,
+      },
+    },
   });
 
   trainersSwiper.enable();

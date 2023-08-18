@@ -35,23 +35,38 @@
 }
 
 .trainers__swiper {
-  // width: 1160px;
-  width: 100%;
-  display: flex;
+  width: 1160px;
 
-  @include vp-1199 {
-    // width: 566px;
-    height: 294px;
+  @include vp-1365 {
+    width: 100%;
   }
 
-  // @include vp-767 {
-  //   width: 226px;
-  // }
+  @include vp-1199 {
+    min-width: 268px;
+    min-height: 294px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 226px;
+  }
 }
 
 .trainers__info {
   position: relative;
+  max-width: 260px;
   cursor: pointer;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+  }
 
   h3 {
     position: absolute;
@@ -66,7 +81,7 @@
 
   img {
     min-height: 294px;
-    object-fit: contain;
+    object-fit: cover;
     z-index: -1;
 
     @include vp-767 {
@@ -75,7 +90,8 @@
   }
 }
 
-.trainers__info:hover {
+.trainers__info:hover,
+.trainers__info:focus-visible {
   background-color: rgba(16, 38, 84, 0.89);
 
   h3 {
@@ -85,7 +101,8 @@
   }
 }
 
-.trainers__info:hover .trainers__text {
+.trainers__info:hover .trainers__text,
+.trainers__info:focus-visible .trainers__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,19 +144,15 @@
 
 .trainers__btn {
   position: absolute;
-  top: 120px;
+  top: -173px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
   @include vp-1199 {
-    top: 120px;
+    top: -173px;
   }
 
   @include vp-767 {
@@ -149,7 +162,7 @@
   }
 
   &--next {
-    right: -6%;
+    left: 101.5%;
 
     @include vp-1199 {
       right: -13%;
