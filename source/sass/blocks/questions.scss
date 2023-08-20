@@ -1,5 +1,9 @@
 .questions {
-  padding-top: 145px;
+  background-color: $color-light-white;
+}
+
+.questions-container {
+  padding-top: 140px;
   padding-bottom: 120px;
 
   @include vp-1199 {
@@ -7,7 +11,8 @@
   }
 
   @include vp-767 {
-    padding-top: 30px;
+    padding-top: 78px;
+    padding-bottom: 68px;
   }
 
   h2 {
@@ -24,7 +29,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 34px;
+      margin-bottom: 38px;
       font-size: 31px;
     }
   }

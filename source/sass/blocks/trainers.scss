@@ -11,7 +11,7 @@
   }
 
   @include vp-767 {
-    padding: 70px 47px;
+    padding: 73px 47px;
   }
 
   h2 {
@@ -43,7 +43,7 @@
 
   @include vp-1199 {
     min-width: 268px;
-    min-height: 294px;
+    height: 294px;
   }
 
   @include vp-767 {
@@ -51,7 +51,8 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    max-width: 226px;
+    min-width: 226px;
+    height: 274px;
   }
 }
 
@@ -66,6 +67,7 @@
 
   @include vp-767 {
     max-width: 226px;
+    margin: 0 auto;
   }
 
   h3 {
@@ -156,7 +158,7 @@
   }
 
   @include vp-767 {
-    top: 122px;
+    top: -156px;
     width: 36px;
     height: 36px;
   }
@@ -165,11 +167,12 @@
     left: 101.5%;
 
     @include vp-1199 {
-      right: -13%;
+      left: 103%;
     }
 
     @include vp-767 {
-      right: -18%;
+      left: 50%;
+      transform: translateX(120px);
     }
 
     svg {
@@ -188,8 +191,13 @@
       left: -13%;
     }
 
+    @include vp-768 {
+      left: -9%;
+    }
+
     @include vp-767 {
-      left: -18%;
+      left: 50%;
+      transform: translateX(-158px);
     }
 
     svg {

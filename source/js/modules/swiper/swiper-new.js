@@ -55,7 +55,6 @@ export const newSwiper = () => {
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 94,
       },
     },
   });
