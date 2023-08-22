@@ -391,7 +391,7 @@ template {
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/roboto-condensed/roboto-condensed-300.woff2") format("woff2");
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Light.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
@@ -1473,7 +1473,7 @@ button,
 @media (max-width: 1199px) {
   .main-footer__wrapper {
     padding-top: 36px;
-    padding-bottom: 35px;
+    padding-bottom: 42px;
   }
 }
 @media (max-width: 767px) {
@@ -1844,10 +1844,17 @@ button,
 }
 @media (max-width: 767px) {
   .intro__video {
-    width: 100%;
-    max-height: 167px;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+@media (max-width: 320px) {
+  .intro__video {
+    height: 167px;
   }
 }
 
@@ -1871,7 +1878,23 @@ button,
 }
 @media (max-width: 767px) {
   .intro__video-btn {
-    right: 116px;
+    bottom: 0;
+    top: 77%;
+    right: 50%;
+    -webkit-transform: translateX(44px);
+        -ms-transform: translateX(44px);
+            transform: translateX(44px);
+    z-index: 10;
+  }
+}
+@media (min-width: 350px) and (max-width: 499px) {
+  .intro__video-btn {
+    top: 75%;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+  .intro__video-btn {
+    top: 70%;
   }
 }
 .intro__video-btn::before {
@@ -2097,19 +2120,30 @@ button,
 }
 
 .product__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 46px;
+     -moz-column-gap: 46px;
+          column-gap: 46px;
+  row-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 @media (max-width: 1199px) {
   .product__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-grid-columns: 65.6%;
+    grid-template-columns: 65.6%;
+  }
+}
+@media (max-width: 767px) {
+  .product__list {
+    -ms-grid-columns: minmax(auto, 600px);
+    grid-template-columns: minmax(auto, 600px);
+    row-gap: 35px;
   }
 }
 
@@ -2122,45 +2156,16 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 38px;
-  padding: 67px 76px;
+  padding: 67px 74px;
   background-color: #ffffff;
+  text-align: center;
   font-size: 60px;
   font-weight: 700;
   z-index: 3;
 }
-@media (max-width: 1199px) {
-  .product__item:nth-child(2) {
-    margin-bottom: 32px;
-  }
-}
-.product__item:not(:last-child) {
-  margin-right: 40px;
-}
-@media (max-width: 1365px) {
-  .product__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-@media (max-width: 1199px) {
-  .product__item:not(:last-child) {
-    margin-right: 0;
-  }
-}
-@media (max-width: 1365px) {
-  .product__item {
-    padding: 67px 70px;
-  }
-}
-@media (max-width: 1199px) {
-  .product__item {
-    padding: 69px 118px;
-  }
-}
 @media (max-width: 767px) {
   .product__item {
-    margin-bottom: 36px;
-    padding: 46px 42px 55px;
+    padding: 50px 40px 58px;
   }
 }
 .product__item:hover {
@@ -2233,6 +2238,7 @@ button,
   .product__price::before {
     top: 206px;
     left: 27%;
+    font-size: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -2256,6 +2262,7 @@ button,
 @media (max-width: 1199px) {
   .product__price span {
     margin-bottom: 67px;
+    font-size: 60px;
   }
 }
 @media (max-width: 767px) {
@@ -2634,6 +2641,12 @@ button,
   line-height: 27px;
   letter-spacing: 0.3px;
 }
+@media (max-width: 1199px) {
+  .trainers__info h3 {
+    bottom: 17px;
+    left: 32%;
+  }
+}
 .trainers__info img {
   min-height: 294px;
   -o-object-fit: cover;
@@ -2746,11 +2759,6 @@ button,
 @media (max-width: 1199px) {
   .trainers__btn--prev {
     left: -13%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .trainers__btn--prev {
-    left: -9%;
   }
 }
 @media (max-width: 767px) {
@@ -3002,8 +3010,8 @@ button,
 .advantages__item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 72px auto;
-  grid-template-columns: 72px auto;
+  -ms-grid-columns: 72px 227px;
+  grid-template-columns: 72px 227px;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
   -webkit-column-gap: 30px;
@@ -3039,7 +3047,7 @@ button,
 @media (max-width: 1199px) {
   .advantages__item h3 {
     margin-top: -3px;
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 .advantages__item p {
@@ -3056,7 +3064,7 @@ button,
 }
 @media (max-width: 1199px) {
   .advantages__item p {
-    margin-top: 24px;
+    margin-top: 22px;
   }
 }
 @media (max-width: 767px) {
@@ -3256,7 +3264,7 @@ button,
 }
 @media (max-width: 1199px) {
   .promo {
-    padding-top: 67px;
+    padding-top: 69px;
   }
 }
 @media (max-width: 767px) {
@@ -3503,7 +3511,7 @@ button,
 @media (max-width: 1199px) {
   .promo__aside {
     width: 324px;
-    padding: 26px 30px 30px;
+    padding: 28px 30px 29px;
   }
 }
 @media (max-width: 767px) {
@@ -3516,7 +3524,7 @@ button,
 }
 @media (max-width: 1199px) {
   .promo__aside--time {
-    padding: 25px 60px 30px 30px;
+    padding: 28px 60px 29px 30px;
   }
 }
 @media (max-width: 767px) {
@@ -4264,7 +4272,7 @@ button,
 }
 @media (max-width: 1199px) {
   .subscription__wrapper h2 {
-    margin-bottom: 37px;
+    margin-bottom: 39px;
     font-size: 42px;
     letter-spacing: 1.6px;
   }
@@ -4396,7 +4404,7 @@ button,
 }
 
 .subscription__btn {
-  padding: 18px 166px;
+  padding: 17px 166px;
   font-size: 12px;
   border: 3px solid #ffffff;
   background-color: transparent;
@@ -4479,7 +4487,7 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__wrapper h2 {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     font-size: 42px;
     letter-spacing: 1.6px;
   }
@@ -4578,7 +4586,7 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__item a {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 @media (hover: hover) {

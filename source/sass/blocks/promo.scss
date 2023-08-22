@@ -4,7 +4,7 @@
   padding-bottom: 120px;
 
   @include vp-1199 {
-    padding-top: 67px;
+    padding-top: 69px;
   }
 
   @include vp-767 {
@@ -197,7 +197,7 @@
 
   @include vp-1199 {
     width: 324px;
-    padding: 26px 30px 30px;
+    padding: 28px 30px 29px;
   }
 
   @include vp-767 {
@@ -209,7 +209,7 @@
 
   &--time {
     @include vp-1199 {
-      padding: 25px 60px 30px 30px;
+      padding: 28px 60px 29px 30px;
     }
 
     @include vp-767 {
