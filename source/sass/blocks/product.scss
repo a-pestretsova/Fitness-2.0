@@ -1,16 +1,4 @@
 .product__list {
-  // display: flex;
-
-  // @include vp-1199 {
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-
-  // @include vp-767 {
-  //   display: grid;
-  //   grid-template-columns: minmax(auto, 600px);
-  //   row-gap: 35px;
-  // }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 46px;
@@ -19,7 +7,8 @@
     width: 100%;
 
     @include vp-1199 {
-      grid-template-columns: 65.6%;
+      grid-template-columns: 1fr;
+      row-gap: 36px;
     }
 
     @include vp-767 {
@@ -32,61 +21,32 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // width: 100%;
-  // margin-bottom: 38px;
-  padding: 67px 74px;
-  // padding: 56px 78px 68px 71px;
+  padding: 56px 78px 68px 71px;
   background-color: $color-default-white;
   text-align: center;
   font-size: 60px;
   font-weight: 700;
   z-index: 3;
 
-  // &:nth-child(2) {
-  //   @include vp-1199 {
-  //     margin-bottom: 32px;
-  //   }
-  // }
-
-  // &:not(:last-child) {
-  //   margin-right: 40px;
-
-  //   @include vp-1365 {
-  //     margin-right: 30px;
-  //   }
-
-  //   @include vp-1199 {
-  //     margin-right: 0;
-  //   }
-  // }
-
-  // @include vp-1365 {
-  //   padding: 67px 70px;
-  // }
-
   @include vp-1199 {
-    padding: 69px 0;
-    width: 65.6%;
-    // padding: 56px 118px 66px;
+    padding: 69px 118px;
   }
 
   @include vp-767 {
-    // margin-bottom: 36px;
-    // padding: 46px 42px 55px;
-    padding: 50px 40px 58px;
+    padding: 46px 40px 58px;
   }
 
   &:hover {
-    padding: 61.5px 70px;
+    padding: 61.5px 0;
     border: 6px solid #003EB7;
     border-image: linear-gradient(#D10A42, #00359F) 30;
 
-    @include vp-1365 {
-      padding: 61px 66px;
-    }
+    // @include vp-1365 {
+    //   padding: 61px 66px;
+    // }
 
     @include vp-1199 {
-      padding: 64px 112px;
+      padding: 63px 112px;
     }
 
     @include vp-767 {
@@ -102,7 +62,8 @@
     text-align: center;
 
     @include vp-767 {
-      font-size: 20px;
+      margin-bottom: 13px;
+      font-size: 19px;
     }
   }
 
@@ -132,14 +93,15 @@
     font-size: 100px;
     z-index: -1;
 
-    @include vp-1365 {
-      left: 58px;
-      font-size: 80px;
-    }
+    // @include vp-1365 {
+    //   left: 58px;
+    //   font-size: 80px;
+    // }
 
     @include vp-1199 {
       top: 206px;
-      left: 27%;
+      left: 50%;
+      transform: translateX(-100px);
       font-size: 100px;
     }
 
@@ -191,7 +153,9 @@
   }
 
   @include vp-1199 {
+    width: 100%;
     padding: 21px 42px;
+    justify-content: center;
   }
 
   @include vp-767 {
@@ -243,7 +207,8 @@
 
     @include vp-1199 {
       top: 200px;
-      left: 26.3%;
+      left: 50%;
+      transform: translateX(-100px);
     }
 
     @include vp-767 {

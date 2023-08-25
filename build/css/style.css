@@ -2135,8 +2135,9 @@ button,
 }
 @media (max-width: 1199px) {
   .product__list {
-    -ms-grid-columns: 65.6%;
-    grid-template-columns: 65.6%;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 36px;
   }
 }
 @media (max-width: 767px) {
@@ -2156,7 +2157,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 67px 74px;
+  padding: 56px 78px 68px 71px;
   background-color: #ffffff;
   text-align: center;
   font-size: 60px;
@@ -2165,30 +2166,24 @@ button,
 }
 @media (max-width: 1199px) {
   .product__item {
-    padding: 69px 0;
-    width: 65.6%;
+    padding: 69px 118px;
   }
 }
 @media (max-width: 767px) {
   .product__item {
-    padding: 50px 40px 58px;
+    padding: 46px 40px 58px;
   }
 }
 .product__item:hover {
-  padding: 61.5px 70px;
+  padding: 61.5px 0;
   border: 6px solid #003EB7;
   -o-border-image: linear-gradient(#D10A42, #00359F) 30;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#D10A42), to(#00359F)) 30;
      border-image: linear-gradient(#D10A42, #00359F) 30;
 }
-@media (max-width: 1365px) {
-  .product__item:hover {
-    padding: 61px 66px;
-  }
-}
 @media (max-width: 1199px) {
   .product__item:hover {
-    padding: 64px 112px;
+    padding: 63px 112px;
   }
 }
 @media (max-width: 767px) {
@@ -2205,7 +2200,8 @@ button,
 }
 @media (max-width: 767px) {
   .product__item h3 {
-    font-size: 20px;
+    margin-bottom: 13px;
+    font-size: 19px;
   }
 }
 .product__item p {
@@ -2234,16 +2230,13 @@ button,
   font-size: 100px;
   z-index: -1;
 }
-@media (max-width: 1365px) {
-  .product__price::before {
-    left: 58px;
-    font-size: 80px;
-  }
-}
 @media (max-width: 1199px) {
   .product__price::before {
     top: 206px;
-    left: 27%;
+    left: 50%;
+    -webkit-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+            transform: translateX(-100px);
     font-size: 100px;
   }
 }
@@ -2296,7 +2289,11 @@ button,
 }
 @media (max-width: 1199px) {
   .product__btn {
+    width: 100%;
     padding: 21px 42px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 767px) {
@@ -2354,7 +2351,10 @@ button,
 @media (max-width: 1199px) {
   .product__item:hover .product__price::before {
     top: 200px;
-    left: 26.3%;
+    left: 50%;
+    -webkit-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+            transform: translateX(-100px);
   }
 }
 @media (max-width: 767px) {
