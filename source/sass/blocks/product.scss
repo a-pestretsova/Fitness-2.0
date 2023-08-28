@@ -13,7 +13,6 @@
 
     @include vp-767 {
       grid-template-columns: minmax(auto, 600px);
-      row-gap: 35px;
     }
 }
 
@@ -107,7 +106,7 @@
 
     @include vp-767 {
       top: 161px;
-      left: 22%;
+      transform: translateX(-95px);
       font-size: 80px;
     }
   }
@@ -142,10 +141,8 @@
 }
 
 .product__btn {
-  // width: 100%;
   margin-top: 68px;
   padding: 20px 43px;
-  // text-align: center;
   border: 2px solid $color-medium-blue;
 
   @include vp-1365 {
@@ -213,7 +210,7 @@
 
     @include vp-767 {
       top: 155px;
-      left: 20.5%;
+      transform: translateX(-95px);
     }
   }
 }

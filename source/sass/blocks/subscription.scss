@@ -32,7 +32,6 @@
 
   @include vp-1199 {
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -41,6 +40,10 @@
 
   @include vp-1199 {
     min-height: 324px;
+  }
+
+  @include vp-767 {
+    width: 100%;
   }
 }
 
@@ -55,7 +58,7 @@
 
   @include vp-767 {
     margin-left: 0;
-    padding: 70px 15px;
+    padding: 70px 0;
   }
 
   h2 {
@@ -92,8 +95,8 @@
     }
 
     @include vp-767 {
-      grid-template-columns: auto;
-      grid-auto-flow: row;
+      grid-template-columns: 1fr;
+      // grid-auto-flow: row;
       row-gap: 25px;
     }
   }
@@ -171,6 +174,8 @@
   }
 
   @include vp-767 {
+    justify-content: center;
+    width: 100%;
     margin-top: 14px;
     padding: 18px 106px;
   }

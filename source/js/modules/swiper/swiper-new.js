@@ -21,37 +21,8 @@ export const newSwiper = () => {
         slidesPerView: 4,
         spaceBetween: 20,
       },
-      1100: {
-        slidesPerView: 3,
-        spaceBetween: 60,
-      },
-      1000: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-      950: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      900: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      850: {
-        slidesPerView: 2,
-        spaceBetween: 80,
-      },
-      800: {
-        slidesPerView: 2,
-        spaceBetween: 60,
-      },
-      770: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
       768: {
         slidesPerView: 2,
-        spaceBetween: 30,
       },
       320: {
         slidesPerView: 1,
