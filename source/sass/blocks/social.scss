@@ -37,7 +37,12 @@
   }
 
   @include hover {
+    stroke: $color-default-white;
     background-color: $color-additional-blue;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 
   @include active {
@@ -45,6 +50,6 @@
   }
 
   &.focus-visible {
-    outline: 0;
+    outline: none;
   }
 }

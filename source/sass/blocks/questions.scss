@@ -128,7 +128,8 @@
     list-style: none;
 
     @include vp-1365 {
-      width: 790px;
+      width: 100%;
+      min-width: 780px;
     }
 
     @include vp-1199 {

@@ -1,7 +1,7 @@
 .product__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 46px;
+    column-gap: 44px;
     row-gap: 40px;
     justify-content: center;
     width: 100%;
@@ -20,7 +20,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 56px 78px 68px 71px;
+  padding: 68px 68px 68px 73px;
   background-color: $color-default-white;
   text-align: center;
   font-size: 60px;
@@ -35,21 +35,19 @@
     padding: 46px 40px 58px;
   }
 
-  &:hover {
-    padding: 61.5px 0;
+  &:hover,
+  &:focus-visible {
+    padding: 62px 64px 64px 69px;
     border: 6px solid #003EB7;
     border-image: linear-gradient(#D10A42, #00359F) 30;
-
-    // @include vp-1365 {
-    //   padding: 61px 66px;
-    // }
+    outline: none;
 
     @include vp-1199 {
       padding: 63px 112px;
     }
 
     @include vp-767 {
-      padding: 40px 35px 47px;
+      padding: 40px 35px 50px;
     }
   }
 
@@ -86,22 +84,19 @@
   &::before {
     position: absolute;
     top: 202px;
-    left: 78px;
+    left: 50%;
+    transform: translateX(-100px);
     content: attr(data-price);
     color: $color-100-white;
     font-size: 100px;
     z-index: -1;
 
-    // @include vp-1365 {
-    //   left: 58px;
-    //   font-size: 80px;
-    // }
+    @include vp-1365 {
+      transform: translateX(-115px);
+    }
 
     @include vp-1199 {
       top: 206px;
-      left: 50%;
-      transform: translateX(-100px);
-      font-size: 100px;
     }
 
     @include vp-767 {
@@ -118,10 +113,12 @@
     font-weight: 700;
 
     @include vp-1365 {
+      margin-left: -10px;
       font-size: 51px;
     }
 
     @include vp-1199 {
+      margin-left: 0;
       margin-bottom: 67px;
       font-size: 60px;
     }
@@ -142,11 +139,11 @@
 
 .product__btn {
   margin-top: 68px;
-  padding: 20px 43px;
+  padding: 20px 42.6px;
   border: 2px solid $color-medium-blue;
 
   @include vp-1365 {
-    padding: 21px 21px;
+    padding: 21px 15px;
   }
 
   @include vp-1199 {
@@ -160,22 +157,20 @@
     padding: 20px 42px;
   }
 
-  &.focus-visible {
-    padding: 22px 45px;
-    color: $color-default-white;
-    border: none;
-    background: linear-gradient(111deg, #ED0233 20%, #003EB7 80%);
+  @include active-no-focus {
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 
-.product__item:hover .product__btn {
+.product__item:hover .product__btn,
+.product__item:focus-visible .product__btn {
   padding: 22px 45px;
   color: $color-default-white;
   border: none;
   background: linear-gradient(111deg, #ED0233 20%, #003EB7 80%);
 
   @include vp-1365 {
-    padding: 22px 21px;
+    padding: 22px 19px;
   }
 
   @include vp-1199 {
@@ -183,34 +178,17 @@
   }
 }
 
-.product__item:hover .product__price {
-  margin-top: -0.5px;
-
-  @include vp-1365 {
-    margin-top: 0;
-  }
-
-  @include vp-1199 {
-    margin-top: 0;
-  }
-
+.product__item:hover .product__price,
+.product__item:focus-visible .product__price {
   &::before {
     top: 196px;
-    left: 72.5px;
-
-    @include vp-1365 {
-      left: 52px;
-    }
 
     @include vp-1199 {
       top: 200px;
-      left: 50%;
-      transform: translateX(-100px);
     }
 
     @include vp-767 {
       top: 155px;
-      transform: translateX(-95px);
     }
   }
 }

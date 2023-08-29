@@ -68,6 +68,10 @@
         font-size: 15px;
       }
 
+      @include hover {
+        opacity: 1;
+      }
+
       @include focus {
         padding: 5px;
         outline: 1px solid $color-default-white;

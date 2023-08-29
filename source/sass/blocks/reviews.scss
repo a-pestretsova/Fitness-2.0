@@ -104,10 +104,9 @@
 
   @include vp-767 {
     display: block;
-    top: 0;
+    top: -187px;
     width: 36px;
     height: 36px;
-    transform: translateY(-300px);
   }
 
   @include hover-focus {

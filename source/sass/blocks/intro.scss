@@ -36,11 +36,12 @@
   }
 
   h2 {
-    margin-top: 56px;
+    margin-top: 40px;
     margin-bottom: 0;
     font-size: 48px;
     font-family: $ff-alumni;
     letter-spacing: 1.44px;
+    line-height: normal;
 
     @include vp-1199 {
       margin-top: 16px;
@@ -57,7 +58,7 @@
   }
 
   h3 {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 0;
     font-size: 16px;
     font-weight: 400;
@@ -76,10 +77,10 @@
   p {
     margin-top: 42px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 24px;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.43px;
 
     @include vp-1199 {
       margin-top: 38px;
@@ -100,10 +101,10 @@
     display: block;
     margin-top: 8px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 24px;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.43px;
 
     @include vp-1199 {
       display: none;
@@ -216,12 +217,13 @@
     width: 100px;
     height: 100px;
     background-image: url("../img/sprite/play-default.svg");
+    background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     content: "";
 
     @include hover {
-      background-image: url("../img/sprite/play-hover.svg");
+      background-image: url("../img/play-hover.png");
     }
 
     @include vp-1199 {
@@ -239,8 +241,8 @@
 
   @include hover-focus {
     &::before {
-      background-image: url("../img/sprite/play-hover.svg");
-      background-color: $color-default-white;
+      background-image: url("../img/play-hover.png");
+      background-color: transparent;
       border-radius: 50%;
       outline: 0;
       outline-offset: 0;

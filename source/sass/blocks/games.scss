@@ -15,8 +15,15 @@
 
   img,
   picture {
+    height: 500px;
+
+    @include vp-1199 {
+      height: 292px;
+    }
+
     @include vp-767 {
       width: 100%;
+      height: 100%;
       max-width: 500px;
     }
   }
