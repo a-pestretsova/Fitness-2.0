@@ -27,7 +27,7 @@
 
   @include vp-767 {
     margin-left: -15px;
-    padding: 70px 15px 64px;
+    padding: 68px 15px 64px;
   }
 
   h2 {
@@ -54,7 +54,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: 200px 100px;
     grid-template-rows: auto auto;
     grid-auto-flow: column;
     column-gap: 90px;
@@ -62,7 +62,7 @@
     list-style: none;
 
     @include vp-1199 {
-      grid-template-columns: repeat(2, 235px);
+      grid-template-columns: 235px 120px;
       column-gap: 80px;
       row-gap: 28px;
     }

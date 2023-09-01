@@ -2,6 +2,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    max-width: 110px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -24,20 +25,19 @@
 }
 
 .social__link {
-  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
   background-color: $color-default-white;
   border-radius: 50%;
 
-  &--ok {
-    padding: 4px 7px;
-  }
-
   svg {
-    vertical-align: middle;
+    fill: $color-dark-blue;
   }
 
   @include hover {
-    stroke: $color-default-white;
     background-color: $color-additional-blue;
 
     svg {
@@ -45,11 +45,20 @@
     }
   }
 
-  @include active {
+  @include active-no-focus {
     background-color: $color-blue;
+    fill: $color-default-white;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 
   &.focus-visible {
     outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }

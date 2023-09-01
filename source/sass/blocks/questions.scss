@@ -36,28 +36,36 @@
 }
 
 .questions__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 40px;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
   }
 }
 
 .questions__controls {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  width: fit-content;
 
   @include vp-1199 {
-    flex-direction: row;
+    width: 100%;
+    margin-bottom: 39px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 6px;
+    width: 100%;
+    margin-bottom: 39px;
   }
 
   @include vp-767 {
-    display: grid;
-    // grid-template-columns: 141px 141px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 8px;
     row-gap: 8px;
-    width: 100%;
     margin: 0 auto;
     margin-bottom: 28px;
   }
@@ -65,9 +73,9 @@
 
 .questions__btn {
   display: inline-block;
-  width: 260px;
-  margin-bottom: 12px;
-  padding: 16px 0;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 17px 85px;
   font-size: 16px;
   font-weight: 600;
   border: 1px solid rgba(16, 38, 84, 0.20);
@@ -76,21 +84,11 @@
 
   @include vp-1199 {
     flex-direction: row;
-    margin-bottom: 40px;
-    padding: 17px 0;
-
-    &:not(:first-child) {
-      margin-left: 10px;
-
-      @include vp-767 {
-        margin-left: 0;
-      }
-    }
+    margin-bottom: 0;
+    padding: 17px 38px;
   }
 
   @include vp-767 {
-    width: 100%;
-    margin-bottom: 0;
     margin-left: 0;
     padding: 14px 0;
     font-size: 14px;
@@ -102,7 +100,7 @@
   }
 
   @include active-no-focus {
-    padding: 17px 0;
+    padding: 18px 86px;
     color: $color-default-white;
     background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
     border: none;
@@ -114,26 +112,19 @@
 }
 
 .questions__list {
-  margin-left: 40px;
-
-  @include vp-1199 {
-    margin-left: 0;
-  }
-
   ul {
-    width: 860px;
+    width: 100%;
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(28, 51, 116, 0.20);
     list-style: none;
 
     @include vp-1365 {
-      width: 100%;
-      min-width: 780px;
+      min-width: 700px;
     }
 
     @include vp-1199 {
-      width: 100%;
+      min-width: auto;
     }
   }
 

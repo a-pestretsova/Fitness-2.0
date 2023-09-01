@@ -32,30 +32,18 @@ export const newSwiper = () => {
 
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     grabCursor: 'true',
+    loop: false,
     slidesPerView: 1,
     navigation: {
       nextEl: '.reviews__btn--next',
       prevEl: '.reviews__btn--prev',
+      disabledClass: 'my-button-disabled',
+      hideOnClick: true,
     },
     mousewheel: false,
     keyboard: true,
     wrapperClass: 'swiper-wrapper',
     slideClass: 'swiper-slide',
-    speed: 900,
-    breakpoints: {
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 5000,
-      },
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 5000,
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 5000,
-      },
-    },
   });
 
   trainersSwiper.enable();

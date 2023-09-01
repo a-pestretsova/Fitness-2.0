@@ -23,6 +23,9 @@
   margin-top: 105px;
   margin-left: 50%;
   transform: translateX(-558px);
+  // display: grid;
+  // grid-template-columns: repeat(3, auto);
+  // grid-template-rows: 111px min-content 21% auto 19%;
   font-weight: 600;
   font-size: 36px;
   line-height: normal;
@@ -46,6 +49,7 @@
     position: absolute;
     top: 176px;
     left: -39px;
+    max-width: 165px;
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;

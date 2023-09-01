@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 39px;
@@ -32,6 +33,7 @@
 
 .tabs__control {
   position: relative;
+  margin: 0;
   padding: 0 0 17px 0;
   color: rgba(16, 38, 84, 0.50);
   font-size: 18px;
