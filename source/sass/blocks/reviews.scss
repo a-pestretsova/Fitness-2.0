@@ -95,16 +95,12 @@
 
 .reviews__btn {
   position: absolute;
-  top: -22vh;
+  top: -147px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
-
-  @include vp-1199 {
-    top: -147px;
-  }
 
   @include vp-767 {
     display: block;
