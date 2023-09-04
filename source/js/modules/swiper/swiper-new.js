@@ -4,6 +4,7 @@ export const newSwiper = () => {
   const trainersSwiper = new Swiper('.trainers__swiper', {
     loop: true,
     grabCursor: 'true',
+    autoHeight: true,
     navigation: {
       nextEl: '.trainers__btn--next',
       prevEl: '.trainers__btn--prev',
@@ -23,6 +24,7 @@ export const newSwiper = () => {
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 30,
       },
       320: {
         slidesPerView: 1,
@@ -34,6 +36,7 @@ export const newSwiper = () => {
     grabCursor: 'true',
     loop: false,
     slidesPerView: 1,
+    autoHeight: true,
     navigation: {
       nextEl: '.reviews__btn--next',
       prevEl: '.reviews__btn--prev',

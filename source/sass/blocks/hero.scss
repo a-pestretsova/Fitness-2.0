@@ -23,9 +23,6 @@
   margin-top: 105px;
   margin-left: 50%;
   transform: translateX(-558px);
-  // display: grid;
-  // grid-template-columns: repeat(3, auto);
-  // grid-template-rows: 111px min-content 21% auto 19%;
   font-weight: 600;
   font-size: 36px;
   line-height: normal;
@@ -62,7 +59,11 @@
     }
 
     @include vp-767 {
-      top: 117px;
+      max-width: 170px;
+      position: static;
+      margin-top: -95px;
+      margin-left: -60px;
+      letter-spacing: 0.22px;
     }
   }
 
@@ -121,7 +122,8 @@
 
   @include vp-767 {
     width: 291px;
-    margin-top: 23px;
+    margin-top: 43px;
+    margin-bottom: 30px;
     padding: 20px 81px;
   }
 

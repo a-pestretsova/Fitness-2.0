@@ -42,6 +42,10 @@
     border-image: linear-gradient(#D10A42, #00359F) 30;
     outline: none;
 
+    @include vp-1365 {
+      padding: 62px 60px 60px 65px;
+    }
+
     @include vp-1199 {
       padding: 63px 112px;
     }

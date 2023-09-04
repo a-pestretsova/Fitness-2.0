@@ -88,23 +88,22 @@
   }
 }
 
-.reviews__btn-wrapper {
-  position: relative;
-  display: block;
-}
-
 .reviews__btn {
   position: absolute;
-  top: -147px;
+  top: 54%;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
 
+  @include vp-1199{
+    top: 51%;
+  }
+
   @include vp-767 {
     display: block;
-    top: -187px;
+    top: 54%;
     width: 36px;
     height: 36px;
   }
@@ -191,14 +190,11 @@
 .reviews__text {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  max-height: 108px;
-  overflow-y: auto;
 
   @include vp-767 {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     margin-top: 0;
-    max-height: 198px;
   }
 
   p {
