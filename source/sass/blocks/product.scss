@@ -13,6 +13,7 @@
 
     @include vp-767 {
       grid-template-columns: minmax(auto, 600px);
+      row-gap: 36px;
     }
 }
 

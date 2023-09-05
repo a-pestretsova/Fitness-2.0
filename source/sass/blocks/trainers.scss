@@ -230,18 +230,10 @@
   }
 }
 
-.trainers__btn-wrapper {
-  position: relative;
-
-  @include vp-767 {
-    width: 100%;
-    display: block;
-  }
-}
-
 .trainers__btn {
   position: absolute;
-  top: -173px;
+  display: inline-block;
+  top: 55%;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -249,21 +241,19 @@
   cursor: pointer;
 
   @include vp-1199 {
-    top: -173px;
+    top: 51%;
   }
 
   @include vp-767 {
-    top: -156px;
+    display: inline-block;
+    top: 54%;
     width: 36px;
     height: 36px;
   }
 
-  // @include vp-321 {
-  //   top: 10vh;
-  // }
-
   &--next {
-    left: 101.5%;
+    left: 50%;
+    transform: translateX(44vw);
 
     @include vp-1199 {
       left: 50%;
@@ -276,7 +266,7 @@
     }
 
     @include vp-321 {
-      left: 100%;
+      left: 94%;
       transform: none;
     }
 
@@ -290,7 +280,8 @@
   }
 
   &--prev {
-    left: -6%;
+    left: 50%;
+    transform: translateX(-48vw);
 
     @include vp-1199 {
       left: 50%;
